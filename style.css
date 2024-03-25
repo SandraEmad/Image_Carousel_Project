@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.consol{
+  
+       width:100vw;
+    height:100vh;
+    position: relative;
+}
+.consol ul{
+    margin:0;
+    padding:0;
+}
+
+.slide{
+    position: absolute;
+    opacity:0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay:200ms ;
+}
+.slide[data-active]{
+   position: absolute; 
+   opacity:1;
+   z-index: 1;
+   transition-delay:0;
+}
+li{
+    display: block;
+    width:100%;
+    height:100%;
+}
+ .slide  img{
+    display: block;
+    width:100%;
+    height:100%;
+     object-fit: cover; 
+    object-position: center;
+ }
+ .consol button{
+    position: absolute;
+    top:50%;
+    font-size :4rem;
+    background:none;
+    border:0;
+    z-index:2;
+    transform: translateY(-50%);
+    color:rgba(255,255,255,0.5);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+    background-color:rgba(255,255,255,0.1);
+ }
+ .consol button:hover, .consol button:focus{
+    color:white;
+    background-color:rgba(255,255,255,0.2);
+ }
+ .consol button:focus{
+    outline: 1px solid black;
+ }
+ .consol .consol-btn-pre{
+    left: 1rem;
+ }
+ .consol .consol-btn-next{
+    right:1rem;
+ }
